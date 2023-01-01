@@ -1,9 +1,8 @@
 
-a = ['1',2, 1, 8]
-b = ['4', 3, 18]
+a = [['1',"2asdfase", "ads", "3ee", "asefe", "4"], ["43232:3", "de,32:344", "asefe"]]
+b = [['4', 3, 18], ["asdef", "asefe","aefasdf"]]
+c = [1, 2, 3, 4, "1"]
 list = []
 
-if 18 in a:
-    print("In a")
-elif 18 in b:
-    print("In B")
+loncount = c.count("1")
+print(loncount)

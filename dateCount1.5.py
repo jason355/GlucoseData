@@ -23,8 +23,8 @@ weekday = []
 
 glutemp = []
 glu = [] 
-
-
+finallist = []
+count = 0
 
 
 with open("..//Glucose.csv", 'r',encoding="utf-8") as file:
@@ -32,14 +32,14 @@ with open("..//Glucose.csv", 'r',encoding="utf-8") as file:
     dataList = list(data)
     lon = len(dataList)
     lonedate = P.countDate(Vac, Sumstart21, Sumend21, Winstart22, Winend22, Sumstart22, Sumend22)
-    P.findCacu(lon, lonedate, dataList, Vac, glutemp, glu)
+    avg = P.findCacu(lon, lonedate, dataList, Vac, glutemp, glu, count, finallist)
+    print(finallist)
 file.close()
 
 
 
-"""    
-with open("..//Glucose output.csv", 'r+', encoding="utf-8") as file:
+with open("..//Glucose output1.5.csv", 'r+', encoding="utf-8") as file:
     writer = csv.writer(file)
-    writer.writerows(glu)
-    print(glu)
-file.close() """
+    writer.writerows(finallist)
+    print(finallist)
+file.close() 
