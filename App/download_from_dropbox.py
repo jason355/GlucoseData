@@ -2,8 +2,12 @@ import dropbox
 import datetime
 import gzip
 import shutil
+
+# 填入Dropbox App 網址
+API_KEY_LINK = ""
+
 # 設置 Dropbox API 令牌
-TOKEN = input("Enter api key (https://www.dropbox.com/developers/apps/info/cp2gno87fn68mcg)>")
+TOKEN = input(f"Enter api key ({API_KEY_LINK})>")
 
 def download_file_from_dropbox(dropbox_path, local_path):
     dbx = dropbox.Dropbox(TOKEN)
